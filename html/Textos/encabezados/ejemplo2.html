@@ -1,0 +1,32 @@
+<style>
+    ol {
+        counter-reset: item;
+    }
+
+    li {
+        display: block;
+    }
+
+    li::before {
+        content: counters(item, ".") " ";
+        counter-increment: item;
+    }
+</style>
+<!-- Listas Anidadas con CSS -->
+<ol>
+    <li>Aves</li>
+    <li>Reptiles
+        <ol>
+            <li>
+                Anfibios
+                <ol>
+                    <li>Ranas</li>
+                </ol>
+            </li>
+            <li>
+                Vertebrados
+            </li>
+        </ol>
+    </li>
+    <li>Mamíferos</li>
+</ol>
